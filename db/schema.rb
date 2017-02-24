@@ -10,6 +10,40 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20170224) do
+
+  create_table "caches", force: :cascade do |t|
+    t.integer  "size"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "connections", force: :cascade do |t|
+    t.integer  "lat"
+    t.integer  "cache_id"
+    t.integer  "endpoint_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "endpoints", force: :cascade do |t|
+    t.integer  "lat"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "requests", force: :cascade do |t|
+    t.integer  "count"
+    t.integer  "video_id"
+    t.integer  "endpoint_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "videos", force: :cascade do |t|
+    t.integer  "size"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end

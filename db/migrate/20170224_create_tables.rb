@@ -1,4 +1,4 @@
-class CreateInitialTables < ActiveRecord::Migration
+class CreateTables < ActiveRecord::Migration
   def self.up
     create_table :videos do |t|
       t.integer :size

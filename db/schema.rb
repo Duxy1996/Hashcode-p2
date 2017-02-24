@@ -40,6 +40,13 @@ ActiveRecord::Schema.define(version: 20170224) do
     t.datetime "updated_at"
   end
 
+  create_table "solutions", force: :cascade do |t|
+    t.integer  "video_id"
+    t.integer  "cache_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "videos", force: :cascade do |t|
     t.integer  "size"
     t.datetime "created_at"

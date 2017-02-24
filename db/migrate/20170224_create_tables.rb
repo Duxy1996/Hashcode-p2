@@ -25,6 +25,11 @@ class CreateTables < ActiveRecord::Migration
       t.integer :endpoint_id
       t.timestamps
     end
+    create_table :solutions do |t|
+      t.integer :video_id
+      t.integer :cache_id
+      t.timestamps
+    end
   end
 
   def self.down

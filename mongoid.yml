@@ -1,0 +1,6 @@
+development:
+  clients:
+    default:
+      database: mongoid:hashcode
+      hosts:
+        - localhost:27017
